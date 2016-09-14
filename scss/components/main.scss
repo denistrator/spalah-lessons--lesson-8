@@ -1,0 +1,143 @@
+@font-face {
+	font-family:"Socialico";
+	src:local("Socialico"),
+		url("Socialico.eot?") format("eot"),
+		url("Socialico.woff") format("woff"),
+		url("Socialico.ttf") format("truetype"),
+		url("Socialico.svg#Socialico") format("svg");
+	font-weight:normal;
+	font-style:normal;
+}
+
+// blocks
+
+.block {
+	&-darken {
+		background-color: #1d2126;
+	}
+	&-dark {
+		background-color: #3a454d;
+	}
+}
+
+// styles
+
+.main-header {
+	@extend %clearfix;
+	position: relative;
+}
+
+.main-logo {
+	float: left;
+}
+
+.main-logo__img-holder {
+	width: 99px;
+	height: 19px;
+	margin: 31px 0; // !
+}
+
+.main-nav {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	padding-left: 100px;
+		&__inner {
+			display: table;
+			height: 100%;
+		}
+			&__elems-holder {
+				@extend %no-text-list-styles;
+				display: table-cell;
+				vertical-align: middle;
+				}
+				&__elem {
+					margin: 0 7px;
+					color: #a4aead;
+					&_active {
+						color: $accent-color;
+						.main-nav__link {
+							border-color: $accent-color;
+						}
+					}
+					&_active:hover {
+						color: $accent-color;
+						.main-nav__link {
+							border-color: $accent-color;
+						}
+					}
+					&:first-child {
+					    margin-left: 0;
+					}
+					&:last-child {
+					    margin-right: 0;
+					}
+				}
+					&__link {
+						border: 2px solid transparent;
+						border-radius: 2px;
+						font-size: 14px;
+						font-weight: 600;
+						color: inherit;
+						text-transform: uppercase;
+						padding: 4px 10px;
+						&:hover {
+							color: inherit;
+							border-color: #5b6168;
+						}
+					}
+}
+// slider
+
+.swiper-wrapper {
+	box-sizing: border-box;
+}
+
+.main-slider {
+
+}
+
+.slider-bg {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.slider-item {
+	// padding: 21.36% 0;
+	
+	&__wrap {
+		width: 57%;
+		min-width: 300px;
+	}
+	&__title {
+		margin-bottom: 27px;
+	}
+}
+
+
+// cards 
+
+.h-cards__link_works {
+	text-transform: uppercase;
+}
+
+
+// media
+
+@media screen and (max-width: 980px) {
+
+}
+
+@media screen and (max-width: 768px) {
+	.h-cards__elem {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.h-cards__elem {
+		width: 100%;
+	}
+}

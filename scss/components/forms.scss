@@ -1,0 +1,81 @@
+$input-color: #333 !default;
+$input-font-size: 16px !default;
+$input-line-height: 1.4;
+$input-bg: #ddd !default;
+$input-border: 1px solid $input-bg !default;
+$input-border-radius: 4px !default;
+$input-padding: 10px 20px !default;
+
+@mixin input-variants( 
+	$color, 
+	$bg, 
+	$border, 
+	$color-hover: lighten($color, 10%), 
+	$bg-hover: lighten($bg, 10%), 
+	$border-hover: lighten($border, 10%)
+	) {
+    color: $color;
+    background: $bg;
+    border-color: $border;
+    &:hover {
+        color: $color-hover;
+        background: $bg-hover;
+        border-color: $border-hover;
+    }
+}
+
+@mixin input-variants-focus( 
+	$color-focus: initial, 
+	$bg-focus: initial, 
+	$border-focus: initial,
+	$outline: initial
+	) {
+    &:focus {
+        color: $color-focus;
+        background: $bg-focus;
+        border-color: $border-focus;
+        outline: $outline;
+    }
+}
+
+@mixin input-placeholder-variants( 
+	$color, 
+	$opacity
+	) {
+    &::-webkit-input-placeholder { 
+    	color: $color;
+    	opacity: $opacity;
+    }
+	&::-moz-input-placeholder { 
+		color: $color;
+		opacity: $opacity;
+	}
+}
+
+
+@mixin input-size($font-size, $padding, $line-height, $radius: $btn-border-radius){
+	font-size: $font-size;
+	padding: $padding;
+    line-height: $line-height;
+	border-radius: $radius;
+}
+
+.input, .input:not([type="submit"]), .textarea {
+    display: inline-block;
+    width: 100%;
+    font-weight: normal;
+    color: $input-color;
+    font-size: $input-font-size;
+    line-height: $input-line-height;
+    background: $input-bg;
+    border: $input-border;
+    border-radius: $input-border-radius;
+    padding: $input-padding;
+
+    &:focus::-webkit-input-placeholder { color: transparent; }
+	&:focus::-moz-input-placeholder { color: transparent; }
+}
+
+.textarea {
+	
+}

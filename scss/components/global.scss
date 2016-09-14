@@ -1,0 +1,68 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+&:before,
+&:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+div[class $="logo-holder"],
+div[class $="img-holder"] {
+	font-size: 0;
+}
+
+.js-fine-align-landscape {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+    left: -50%;
+    right: -50%;
+    height: 100%;
+    max-width: none;
+    width: auto;
+    margin: auto;
+}
+.js-fine-align-portrait {
+	position: absolute;
+    left: 0;
+    right: 0;
+    top: -100%;
+    bottom: -100%;
+    height: auto;
+    max-width: none;
+    width: 100%;
+    margin: auto;
+}
+
+.wrapper {
+	overflow: hidden;
+	display: table;
+	width: 100%;
+	max-width: 1920px;
+	height: 100vh;
+	table-layout: fixed;
+	margin: 0 auto;
+}
+
+// .footer {
+// 	display: table-footer-group;
+// 	height: 1%;
+// }
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
+}

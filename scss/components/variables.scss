@@ -1,0 +1,50 @@
+$block-inverse-color: white;
+$block-title-size: 36px;
+$block-padding-y: 0px;
+
+$body-color: #8d8f92;
+$font-size-base: 16px;
+$line-height-base: 26px;
+$font-family-base: 'Open Sans', Arial, sans-serif;
+$link-color: white;
+
+$accent-color: #23b7a4;
+
+$heading-font-family: 'Quattrocento Sans', Arial, sans-serif;
+$heading-font-transform: uppercase;
+$heading-color: #292f36;
+$heading-font-indent-reset: left;
+
+$heading-font-size-1: 40px;
+$heading-font-size-2: 36px;
+$heading-font-size-3: 17px;
+$heading-font-size-4: 15px; // unused
+$heading-font-size-5: 13px; // unused
+$heading-font-size-6: 11px; // unused
+
+$btn-color: white;
+$btn-font-size: 14px;
+$btn-bg: $accent-color;
+$btn-border: 2px solid $btn-bg;
+$btn-border-radius: 2px 3px 3px 2px;
+$btn-padding: 15px 28px;
+
+$input-color: initial;
+$input-bg: #eaeef1;
+$input-border: 2px solid $input-bg;
+$input-border-radius: 2px;
+$input-padding: 10px 20px; // !
+
+$block-title-size: $heading-font-size-2;
+$block-description-size: $font-size-base;
+
+$h-card-orig-width: 360;
+$h-card-orig-height: 265;
+$h-cards-width: 33.333%;
+$h-cards-margin: 1.282%;
+
+
+$h-card-overlay-font-size: 32px;
+
+$h-card-header-height: 0;
+$h-card-footer-height: 22.64%;

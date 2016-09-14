@@ -1,0 +1,56 @@
+%no-text-list-styles {
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+	list-style: none;
+}
+
+%no-text-list-styles li {
+	display: inline-block;
+	font-size: initial;
+}
+
+%clearfix {
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+%simple-anim {
+	transition: all .25s linear;
+}
+
+@mixin indent-reset($val) {
+	@if $val == left {
+		margin-left: 0;
+		padding-left: 0;
+	}
+	@if $val == rigth {
+		margin-rigth: 0;
+		padding-rigth: 0;
+	}
+	@if $val == top {
+		margin-top: 0;
+		padding-top: 0;
+	}
+	@if $val == bottom {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	@if $val == all {
+		margin: 0;
+		padding: 0;
+	}
+	@if null {
+		
+	}
+}
+
+@function find-the-proportion($width, $height) {
+  @return $width / $height * 100%;
+}
