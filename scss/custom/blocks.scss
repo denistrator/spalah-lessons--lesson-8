@@ -1,0 +1,16 @@
+$darken-color: #1d2126 !default;
+$dark-color: #3a454d !default;
+
+.block {
+	&-darken {
+		background-color: $darken-color;
+	}
+	&-dark {
+		background-color: $dark-color;
+	}
+	&-overlay {
+		&:after {
+			opacity: 0.45;
+		}
+	}
+}

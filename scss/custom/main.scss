@@ -1,0 +1,334 @@
+$darken-color: #1d2126;
+$dark-color: #3a454d;
+$accent-color: #23b7a4;
+$inactive-link-color: #a4aead;
+
+
+$header-main-bg-color: #E3E2E2 !default;
+$main-nav-width: initial !default;
+$main-nav-overlay-color: $header-main-bg-color !default;
+$main-nav-overlay-opacity: 0.92 !default;
+
+@font-face {
+	font-family:"Socialico";
+	src:local("Socialico"),
+		url("Socialico.eot?") format("eot"),
+		url("Socialico.woff") format("woff"),
+		url("Socialico.ttf") format("truetype"),
+		url("Socialico.svg#Socialico") format("svg");
+	font-weight:normal;
+	font-style:normal;
+}
+
+// styles
+
+// header
+
+.header-main {
+	@extend %clearfix;
+	position: relative;
+	background-color: $header-main-bg-color;
+}
+
+.main-logo {
+	float: left;
+}
+
+.main-logo__img-holder {
+	width: 99px;
+	height: 19px;
+	margin: 31px 0;
+}
+
+#main-nav-button-checkbox {
+	display: none;
+	&:checked ~ .main-nav {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	&:checked ~ .main-nav-button {
+	  color: $accent-color;
+		font-weight: 700;
+	}
+}
+
+.main-nav-button {
+	color: $inactive-link-color;
+    display: none;
+	float: right;
+	padding: 27px;
+	overflow: hidden;
+	text-transform: uppercase;
+	font-weight: 300;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	&:focus {
+		outline: none;
+	}
+}
+
+.main-nav {
+	padding: 28px 0 21px;
+ 	float: right;
+
+	@extend %simple-anim;
+	will-change: opacity, transform;
+	&__elems-holder {
+		@extend %no-text-list-styles;
+	}
+	&__elem {
+		margin: 0 7px;
+		color: $inactive-link-color;
+		display: inline-block;
+		&_active {
+			color: $accent-color;
+			.main-nav__link {
+				border-color: $accent-color;
+			}
+			&:hover {
+			color: $accent-color;
+				.main-nav__link {
+					border-color: $accent-color;
+				}
+			}
+		}
+		&:first-child {
+		    margin-left: 0;
+		}
+		&:last-child {
+		    margin-right: 0;
+		}
+	}
+	&__link {
+		border: 2px solid transparent;
+		border-radius: 2px;
+		font-size: 14px;
+		font-weight: 600;
+		color: inherit;
+		text-transform: uppercase;
+		padding: 4px 10px;
+		&:hover {
+			color: inherit;
+			border-color: inherit;
+		}
+	}
+}	
+
+// slider
+
+.swiper-wrapper {
+	box-sizing: border-box;
+}
+
+.main-slider {
+
+}
+
+.slider-bg {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.slider-item {	
+	&__wrap {
+		width: 57%;
+		min-width: 300px;
+	}
+	&__title {
+		margin-bottom: 27px;
+	}
+}
+
+
+.main-swiper-pagination {
+	position: relative;
+    bottom: 25px;
+    text-align: right;
+    margin: 0 -4px;
+    .swiper-pagination-bullet {
+    	width: 13px;
+		height: 13px;
+		margin: 0 4px;
+		border: 2px solid white;
+		background-color: transparent;
+		opacity: 1;
+    	&-active {
+			background-color: #fff;
+    	}
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// cards 
+
+.h-cards__link_works {
+	text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// media
+
+@media screen and (max-width: 980px) {
+
+}
+
+@media screen and (max-width: 768px) {
+	.main-nav-button {
+		display: block;	
+	}
+	.main-nav {
+		position: absolute;
+ 		top: 100%;
+ 		right: -($container-padding-x);
+ 		z-index: 2;
+ 		padding: 12px 0;
+ 		float: none;
+		width: $main-nav-width;
+		transform: translateX(150%);
+		opacity: 0;
+		&:after {
+			background-color: $darken-color;
+			opacity: $main-nav-overlay-opacity;
+		}
+		&__elem {
+			display: block;
+			margin: 0;
+			padding: 12px 40px;
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.32);
+				.main-nav__link {
+					border-color: transparent;
+					border-left-color: $inactive-link-color;
+				}
+			}
+			&:first-child {
+			    margin-top: 0;
+			}
+			&:last-child {
+			    margin-bottom: 0;
+			}
+			&_active {
+				.main-nav__link {
+					border-color: transparent;
+					border-left-color: $accent-color;
+				}
+				&:hover {
+					.main-nav__link {
+						border-color: transparent;
+						border-left-color: $accent-color;
+					}
+				}
+			}
+		}
+		&__link {
+			&:hover {
+				border-color: transparent;
+			}
+		}
+	}
+	.h-cards__elem {
+		width: 50%;
+	}
+}
+@media screen and (max-width: 480px) {
+	.h-cards__elem {
+		width: 100%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// media
+
+@media screen and (min-width: 1280px) {
+
+}
+
+@media screen and (min-width: 980px) {
+
+}
+
+@media screen and (min-width: 768px) {
+	
+}
+
+@media screen and (min-width: 480px) {
+	
+}
+
+@media screen and (min-width: 320px) {
+	
+}
