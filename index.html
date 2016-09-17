@@ -15,32 +15,33 @@
 </head>
 <body>
 	<div class="wrapper">
-		<div class="block block-fill-height block-inverse block-darken">
-			<div class="block-header">
+		<div class="block block-fill-height block-inverse block-dark block-overlay" style="background-image: url('images/main-slider-bg.jpg')"> 
+			<div class="block-header block-darken">
 				<div class="block-inner">
 					<div class="container">
-						<header class="main-header">
+						<header class="header-main">
 							<div class="main-logo">
-								<div class="main-logo__img-holder"><img src="images/main-logo.png" alt="" class="main-logo__img"></div>
+								<div class="main-logo main-logo__img-holder"><img src="images/main-logo.png" alt="" class="main-logo__img"></div>
 							</div>
-							<nav class="main-nav">
-								<div class="main-nav__inner">
-									<ul class="main-nav__elems-holder">
-										<li class="main-nav__elem main-nav__elem_active"><a href="" class="main-nav__link">HOME</a></li>
-										<li class="main-nav__elem"><a href="" class="main-nav__link">about</a></li>
-										<li class="main-nav__elem"><a href="" class="main-nav__link">work</a></li>
-										<li class="main-nav__elem"><a href="" class="main-nav__link">TEAM</a></li>
-										<li class="main-nav__elem"><a href="" class="main-nav__link">services</a></li>
-										<li class="main-nav__elem"><a href="" class="main-nav__link">FEATURES</a></li>
-										<li class="main-nav__elem"><a href="" class="main-nav__link">contact</a></li>
-									</ul>
-								</div>
+							<input type="checkbox" id="main-nav-button-checkbox">
+							<label for="main-nav-button-checkbox" class="main-nav-button"><span class="">Menu</span>
+							</label>
+							<nav class="main-nav block-overlay">
+								<ul class="main-nav__elems-holder">
+									<li class="main-nav__elem main-nav__elem_active"><a href="#" class="main-nav__link">HOME</a></li>
+										<li class="main-nav__elem"><a href="#" class="main-nav__link">about</a></li>
+										<li class="main-nav__elem"><a href="#" class="main-nav__link">work</a></li>
+										<li class="main-nav__elem"><a href="#" class="main-nav__link">TEAM</a></li>
+										<li class="main-nav__elem"><a href="#" class="main-nav__link">services</a></li>
+										<li class="main-nav__elem"><a href="#" class="main-nav__link">FEATURES</a></li>
+										<li class="main-nav__elem"><a href="#" class="main-nav__link">contact</a></li>
+								</ul>
 							</nav>
 						</header>
 					</div>
 				</div>
 			</div>
-			<div class="block-content slider-bg" style="background-image: url('images/main-slider-bg.jpg')">
+			<div class="block-content slider-bg">
 				<div class="block-inner">
 					<div class="swiper-container main-slider">
 					    <div class="swiper-wrapper">
@@ -55,7 +56,7 @@
 					        <div class="swiper-slide">
 								<div class="container slider-item">
 									<div class="slider-item__wrap">
-										<h2 class="block-title slider-item__title">2welcome to our marketplace</h2>
+										<h2 class="block-title slider-item__title">welcome to our marketplace</h2>
 										<p class="block-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi metus, tristique ndolor non, ornare sagittis dolor. Nulla vestibulu lacus ...</p>
 									</div>
 								</div>
@@ -63,21 +64,19 @@
 					        <div class="swiper-slide">
 								<div class="container slider-item">
 									<div class="slider-item__wrap">
-										<h2 class="block-title slider-item__title">3welcome to our marketplace</h2>
-										<p class="block-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi metus, tristique ndolor non, ornare sagittis dolor. Nulla vestibulu lacus ...</p>
-									</div>
-								</div>
-					        </div>
-					        <div class="swiper-slide">
-								<div class="container slider-item">
-									<div class="slider-item__wrap">
-										<h2 class="block-title slider-item__title">4welcome to our marketplace</h2>
+										<h2 class="block-title slider-item__title">welcome to our marketplace</h2>
 										<p class="block-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi metus, tristique ndolor non, ornare sagittis dolor. Nulla vestibulu lacus ...</p>
 									</div>
 								</div>
 					        </div>
 					    </div>
-					    <div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+			<div class="block-footer">
+				<div class="block-inner">
+					<div class="container">
+						<div class="swiper-pagination main-swiper-pagination"></div>
 					</div>
 				</div>
 			</div>

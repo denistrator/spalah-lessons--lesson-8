@@ -15,6 +15,9 @@ $(function(){
       loop: true,
       speed: 400,
 	  // autoplay: 3500
+
+	  pagination: '.main-swiper-pagination',
+	  paginationClickable: true
     })        
 
 })
