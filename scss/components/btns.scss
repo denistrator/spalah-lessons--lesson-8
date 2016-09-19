@@ -7,7 +7,7 @@ $btn-padding: 10px 20px !default;
 
 $btn-color-hover:  #333 !default;
 $btn-bg-hover: #ddd !default;
-$btn-border-color-hover: $btn-bg !default;
+$btn-border-color-hover: #ddd !default;
 
 @mixin btn-variants( 
     $color, 
@@ -20,6 +20,7 @@ $btn-border-color-hover: $btn-bg !default;
     color: $color;
     background: $bg;
     border-color: $border;
+    @content;
     &:hover {
         color: $color-hover;
         background: $bg-hover;
@@ -35,7 +36,8 @@ $btn-border-color-hover: $btn-bg !default;
 
 .btn {
     display: inline-block;
-    user-select: none;
+    -webkit-user-select: none;
+            user-select: none;
     cursor: pointer;
     font-weight: normal;
     color: $btn-color;
@@ -48,6 +50,6 @@ $btn-border-color-hover: $btn-bg !default;
     &:hover {
         color: $btn-color-hover;
         background: $btn-bg-hover;
-        border: $btn-border-color-hover;
+        border-color: $btn-border-color-hover;
     }
 }

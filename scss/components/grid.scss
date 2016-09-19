@@ -5,8 +5,11 @@ $dev: false !default;
 
 
 .row {
+    @extend %clearfix;
     margin: 0 (-$grid-gutter);
 }
+
+// do not forget about "col-"
 
 [class*="col-"] {
     padding: 0 $grid-gutter;
@@ -20,6 +23,7 @@ $dev: false !default;
 
 
 $breakpoint: ( 
+    xxs: 320px, 
 	xs: 480px, 
 	sm: 768px, 
 	md: 980px, 
