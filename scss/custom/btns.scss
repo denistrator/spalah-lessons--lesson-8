@@ -1,0 +1,29 @@
+.btn { 
+	@include btn-variants($color: white, 
+				    	  $bg: transparent, 
+				    	  $border: white, 
+				    	  $color-hover: white, 
+				    	  $bg-hover: $accent-color, 
+				    	  $border-hover: $accent-color){
+		text-transform: uppercase;	
+	};
+	@include btn-size($font-size: 14px,
+	 				  $padding: 10px 27px,
+	 				  $radius: 4px);
+	&_inverse {
+		@include btn-variants($color: white, 
+					    	  $bg: $accent-color, 
+					    	  $border: $accent-color, 
+					    	  $color-hover: white, 
+					    	  $bg-hover: $accent-color, 
+					    	  $border-hover: white){
+			text-transform: uppercase;	
+		};
+	}
+	&-group {
+		margin-right: 10px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
