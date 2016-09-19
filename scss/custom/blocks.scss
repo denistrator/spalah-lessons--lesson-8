@@ -1,5 +1,6 @@
 $darken-color: #1d2126 !default;
 $dark-color: #3a454d !default;
+$block-overlay-opacity: 0.8 !default;
 
 .block {
 	&-darken {
@@ -10,7 +11,53 @@ $dark-color: #3a454d !default;
 	}
 	&-overlay {
 		&:after {
-			opacity: 0.45;
+			opacity: $block-overlay-opacity;
 		}
+	}
+	&-title {
+		&_decor-line {
+			position: relative;
+			padding-left: 24px;
+			&:before {
+				content: '';
+				display: inline-block;
+				width: 10px;
+				position: absolute;
+				top: 7px;
+				bottom: 7px;
+				left: 0;
+				background-color: #e1e6ea;
+			}
+		}
+	}
+	&-inverse {
+		.block-title {
+			&_decor-line {
+				&:before {
+					background-color: #4e5a62;
+				}
+			}
+		}
+	}
+	&-padding-bottom {
+		&-xl {
+			padding-bottom: 165 / 1140 * 100%;
+		}
+		&-lg {
+			padding-bottom: 120 / 1140 * 100%;
+		}
+		&-md {
+			padding-bottom: 100 / 1140 * 100%;
+		}
+		&-sm {
+			padding-bottom: 90 / 1140 * 100%;
+		}
+		&-xs {
+			padding-bottom: 60 / 1140 * 100%;
+		}
+	}
+	&-separator {
+		border: none;
+		border-top: 1px solid #dde1e4;
 	}
 }
