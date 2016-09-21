@@ -15,6 +15,8 @@ $block-overlay-opacity: 0.8 !default;
 		}
 	}
 	&-title {
+		margin-top: 86 / 1170 * 100%;
+		margin-bottom: 63 / 1170 * 100%;
 		&_decor-line {
 			position: relative;
 			padding-left: 24px;
@@ -23,8 +25,8 @@ $block-overlay-opacity: 0.8 !default;
 				display: inline-block;
 				width: 10px;
 				position: absolute;
-				top: 7px;
-				bottom: 7px;
+				top: 6px;
+				bottom: 8px;
 				left: 0;
 				background-color: #e1e6ea;
 			}
@@ -41,19 +43,19 @@ $block-overlay-opacity: 0.8 !default;
 	}
 	&-padding-bottom {
 		&-xl {
-			padding-bottom: 165 / 1140 * 100%;
+			padding-bottom: 165 / 1170 * 100%;
 		}
 		&-lg {
-			padding-bottom: 120 / 1140 * 100%;
+			padding-bottom: 120 / 1170 * 100%;
 		}
 		&-md {
-			padding-bottom: 100 / 1140 * 100%;
+			padding-bottom: 100 / 1170 * 100%;
 		}
 		&-sm {
-			padding-bottom: 90 / 1140 * 100%;
+			padding-bottom: 90 / 1170 * 100%;
 		}
 		&-xs {
-			padding-bottom: 60 / 1140 * 100%;
+			padding-bottom: 60 / 1170 * 100%;
 		}
 	}
 	&-separator {
