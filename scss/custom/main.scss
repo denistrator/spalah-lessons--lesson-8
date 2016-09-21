@@ -450,6 +450,10 @@ $features-with-counter__counter-font-size: 20px;
 	}
 }
 
+.form-group {
+	width: 100%;
+}
+
 
 // footer
 
@@ -506,7 +510,9 @@ $features-with-counter__counter-font-size: 20px;
 // media
 
 @media screen and (max-width: 980px) {
-
+	.contact-form {
+		margin-top: 0;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -562,6 +568,21 @@ $features-with-counter__counter-font-size: 20px;
 				border-color: transparent;
 			}
 		}
+	}
+	.main-footer {
+		text-align: center;
+		&__copyright {
+			float: none;
+			margin: 16px 0 14px;
+		}
+	}
+	.main-footer-social {
+		float: none;
+		padding: 8px 0;
+			&__link {
+				font-size: 21px;
+				padding: 5px 16px;
+			}
 	}
 }
 @media screen and (max-width: 480px) {

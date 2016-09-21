@@ -1345,6 +1345,10 @@ p, .p {
   height: 159px;
 }
 
+.form-group {
+  width: 100%;
+}
+
 .main-footer__copyright {
   float: left;
   margin: 40px 0 36px;
@@ -1369,6 +1373,12 @@ p, .p {
 
 .main-footer-social__link:hover {
   color: #23b7a4;
+}
+
+@media screen and (max-width: 980px) {
+  .contact-form {
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1418,6 +1428,21 @@ p, .p {
   }
   .main-nav__link:hover {
     border-color: transparent;
+  }
+  .main-footer {
+    text-align: center;
+  }
+  .main-footer__copyright {
+    float: none;
+    margin: 16px 0 14px;
+  }
+  .main-footer-social {
+    float: none;
+    padding: 8px 0;
+  }
+  .main-footer-social__link {
+    font-size: 21px;
+    padding: 5px 16px;
   }
 }
 
