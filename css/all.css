@@ -88,10 +88,6 @@ ul {
   table-layout: fixed;
 }
 
-.wrapper-display-block {
-  display: block;
-}
-
 .container {
   margin: 0 auto;
   max-width: 1170px;
@@ -200,7 +196,9 @@ p, .p {
 .btn {
   display: inline-block;
   -webkit-user-select: none;
-  user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
   cursor: pointer;
   font-weight: normal;
   color: white;
@@ -862,7 +860,9 @@ p, .p {
 }
 
 #main-nav-button-checkbox:checked ~ .main-nav {
-  transform: translateX(0);
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
   opacity: 1;
 }
 
@@ -1088,14 +1088,14 @@ p, .p {
 }
 
 .h-cards-people .h-cards__card-with-header-elem-shift {
-  top: 0;
+  top: 20%;
 }
 
 .h-cards-people .h-cards__header {
   text-align: center;
   opacity: 0;
-  height: 0;
-  background-color: #292f36;
+  height: 20%;
+  background-color: #ccc;
 }
 
 .h-cards-people .h-cards__header-align {
@@ -1160,14 +1160,14 @@ p, .p {
 }
 
 .h-cards-things .h-cards__card-with-header-elem-shift {
-  top: 0;
+  top: 20%;
 }
 
 .h-cards-things .h-cards__header {
   text-align: center;
   opacity: 0;
-  height: 0;
-  background-color: #292f36;
+  height: 20%;
+  background-color: #ccc;
 }
 
 .h-cards-things .h-cards__header-align {
@@ -1393,7 +1393,9 @@ p, .p {
     padding: 12px 0;
     float: none;
     width: initial;
-    transform: translateX(150%);
+    -webkit-transform: translateX(150%);
+        -ms-transform: translateX(150%);
+            transform: translateX(150%);
     opacity: 0;
   }
   .main-nav:after {

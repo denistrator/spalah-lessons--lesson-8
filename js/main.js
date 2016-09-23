@@ -10,6 +10,15 @@ $(function(){
 		}
 	});
 
+	$('a[href ^= "#"]').click(function () {
+		$(".main-nav__elem").removeClass('main-nav__elem_active');
+		$(this).parent().addClass('main-nav__elem_active');
+		var elementClick = $(this).attr("href");
+		var destination = $(elementClick).offset().top;
+		$('html,body').animate( { scrollTop: destination }, 1000 );
+		return false;
+	});
+
     var mainSwiper = new Swiper ('.main-slider', {
       direction: 'horizontal',
       loop: true,
